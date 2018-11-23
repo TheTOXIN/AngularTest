@@ -1,0 +1,10 @@
+:host {
+  background-color: gray;
+  font-family: Verdana;
+}
+
+.CLICK {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-test';
+  name = 'ANGULAR';
+  counter = 0;
+
+  @ViewChild('label')
+  label: ElementRef;
+
+  onChanged(value: boolean) {
+    if (value) {
+      this.counter++;
+    }
+
+    if (this.counter > 100) {
+      this.label.nativeElement.textContent = '=)';
+    }
+  }
+
 }
