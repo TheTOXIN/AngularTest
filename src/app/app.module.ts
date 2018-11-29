@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { ChildComponent } from './child/child.component';
+import { DirectComponent } from './direct/direct.component';
+import {BoldDirective} from './direct/bold.directive';
+import {WhileDirective} from './direct/while.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    DirectComponent,
+    BoldDirective,
+    WhileDirective
   ],
   imports: [
     BrowserModule,

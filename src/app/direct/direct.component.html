@@ -1,0 +1,20 @@
+<div [class.beautyFont] = "true">
+  <p [ngStyle]="{'font-size': '25px'}">
+    TEST DIRECT
+  </p>              
+  <button (click)="toggle()">
+    <span *ngIf="visibility; then thenSpan else elseSpan">
+    </span>
+    <ng-template #thenSpan>PUSH</ng-template>
+    <ng-template #elseSpan>PULL</ng-template>
+  </button>
+  <p [toBold]="'green'" [defColor]="'red'" [style.fontFamily]="'Segoe Print'" [ngClass]="{invisible: visibility}">
+    HELLO
+  </p>
+  <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
+  <p *while="visibility">
+    WORLD
+  </p>
+</div>
